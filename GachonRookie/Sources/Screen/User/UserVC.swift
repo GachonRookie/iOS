@@ -15,6 +15,20 @@ import Then
 class UserVC: UIViewController {
 
     // MARK: Variables
+    
+    lazy var myClubLabel: UILabel = UILabel().then {
+        $0.text = "username님이 찜한 동아리예요."
+        $0.font = Title3
+    }
+    
+    lazy var myClubCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
+        $0.scrollDirection = .horizontal
+        $0.minimumLineSpacing = 20
+        $0.minimumInteritemSpacing = 20
+    }).then {
+        $0.showsHorizontalScrollIndicator = false
+        $0.register(MyClubCollectionViewCell.self, forCellWithReuseIdentifier: MyClubCollectionViewCell().cellID)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +37,14 @@ class UserVC: UIViewController {
         setUpLayout()
         setUpDelegate()
         setUpConstraint()
+        setUpNotification()
     }
     
 
     // MARK: View
     
     func setUpView() {
-        
+        view.backgroundColor = .white
     }
     
     
@@ -37,21 +52,74 @@ class UserVC: UIViewController {
     
     func setUpLayout() {
         [
-            
+            myClubLabel,
+            myClubCollectionView
         ].forEach { view.addSubview($0) }
     }
     
     // MARK: Delegate
     
     func setUpDelegate() {
-        
+        myClubCollectionView.dataSource = self
+        myClubCollectionView.delegate = self
     }
     
     
     // MARK: Constraint
     
     func setUpConstraint() {
+        myClubLabel.snp.makeConstraints {
+            $0.top.leading.equalTo(view.safeAreaLayoutGuide).offset(20)
+        }
         
+        myClubCollectionView.snp.makeConstraints {
+            $0.top.equalTo(myClubLabel.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-20)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
+        }
+    }
+    
+    
+    // MARK: Notification
+    
+    func setUpNotification() {
+        /// 카드 셀에서 심사 결과 등록하기 버튼 눌렀을 때 받는 notification
+        NotificationCenter.default.addObserver(self, selector: #selector(didResultButtonTapped), name: NSNotification.Name("resultButtonTapped"), object: nil)
+    }
+    
+    
+    // MARK: Function
+    
+    @objc func didResultButtonTapped() {
+        let popUpVC = ResultPopUpVC()
+        popUpVC.view.backgroundColor = .black.withAlphaComponent(0.5)
+        popUpVC.modalTransitionStyle = .crossDissolve
+        popUpVC.modalPresentationStyle = .overFullScreen
+        
+        self.present(popUpVC, animated: true)
+    }
+}
+
+
+// MARK: Extension
+
+extension UserVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyClubCollectionViewCell().cellID, for: indexPath) as? MyClubCollectionViewCell else { return UICollectionViewCell() }
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
 }
