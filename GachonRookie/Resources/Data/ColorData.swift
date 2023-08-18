@@ -28,6 +28,6 @@ let Active = UIColor(hexCode: "007DF0")
 
 let Main01 = UIColor(hexCode: "0081C9")
 let Main02 = UIColor(hexCode: "5BC0F8")
-let Main03 = UIColor(hexCode: "86E5FF")
+let Main03 = UIColor(hexCode: "F4FAFD")
 let Main04 = UIColor(hexCode: "FFC93C")
 let Main05 = UIColor(hexCode: "A2FF86")
