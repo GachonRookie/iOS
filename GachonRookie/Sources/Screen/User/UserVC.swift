@@ -37,6 +37,7 @@ class UserVC: UIViewController {
         setUpLayout()
         setUpDelegate()
         setUpConstraint()
+        setUpNotification()
     }
     
 
@@ -68,15 +69,35 @@ class UserVC: UIViewController {
     
     func setUpConstraint() {
         myClubLabel.snp.makeConstraints {
-            $0.top.leading.equalTo(view.safeAreaLayoutGuide).offset(30)
+            $0.top.leading.equalTo(view.safeAreaLayoutGuide).offset(20)
         }
         
         myClubCollectionView.snp.makeConstraints {
-            $0.top.equalTo(myClubLabel.snp.bottom).offset(40)
+            $0.top.equalTo(myClubLabel.snp.bottom).offset(20)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-20)
-            $0.height.equalTo(680)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
         }
+    }
+    
+    
+    // MARK: Notification
+    
+    func setUpNotification() {
+        /// 카드 셀에서 심사 결과 등록하기 버튼 눌렀을 때 받는 notification
+        NotificationCenter.default.addObserver(self, selector: #selector(didResultButtonTapped), name: NSNotification.Name("resultButtonTapped"), object: nil)
+    }
+    
+    
+    // MARK: Function
+    
+    @objc func didResultButtonTapped() {
+        let popUpVC = ResultPopUpVC()
+        popUpVC.view.backgroundColor = .black.withAlphaComponent(0.5)
+        popUpVC.modalTransitionStyle = .crossDissolve
+        popUpVC.modalPresentationStyle = .overFullScreen
+        
+        self.present(popUpVC, animated: true)
     }
 }
 

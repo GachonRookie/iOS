@@ -56,6 +56,7 @@
 		DDA73AED2A8F7B6B00C9D65A /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */; };
 		DDA73AEF2A8F7B7600C9D65A /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEE2A8F7B7600C9D65A /* ReportVC.swift */; };
 		DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */; };
+		DDAFE6DC2A8FB435005B2D55 /* ResultPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAFE6DB2A8FB435005B2D55 /* ResultPopUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		DDA73AEE2A8F7B7600C9D65A /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DDAFE6DB2A8FB435005B2D55 /* ResultPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */,
+				DDAFE6DB2A8FB435005B2D55 /* ResultPopUpVC.swift */,
 				DDE316E62A8F8BA20063754A /* Cell */,
 			);
 			path = User;
@@ -490,6 +493,7 @@
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
 				88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */,
 				DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */,
+				DDAFE6DC2A8FB435005B2D55 /* ResultPopUpVC.swift in Sources */,
 				DD60D38B2A8901BB005D6F7F /* UIImage+.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,

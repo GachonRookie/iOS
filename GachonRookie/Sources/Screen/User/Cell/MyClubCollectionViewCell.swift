@@ -60,6 +60,11 @@ class MyClubCollectionViewCell: UICollectionViewCell {
         $0.text = "clubname"
     }
     
+    var recrutingTypeButton: colorButton = colorButton(frame: CGRect()).then {
+        $0.setColorAndTitle(title: "iOS", titleColor: Black, backgroundColor: .clear, borderColor: Main01.cgColor)
+        
+    }
+    
     var clubRecruitingLabel: UILabel = UILabel().then {
         $0.font = Paragraph4
         $0.text = "모집 기간"
@@ -122,6 +127,7 @@ class MyClubCollectionViewCell: UICollectionViewCell {
             clubTypeLabel,
             resultEnrollButton,
             clubNameLabel,
+            recrutingTypeButton,
             clubRecruitingLabel,
             clubRecruitngDateLabel,
             currentApplyLabel,
@@ -145,18 +151,18 @@ class MyClubCollectionViewCell: UICollectionViewCell {
         backView.snp.makeConstraints {
             $0.top.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.height.equalTo(620)
+            $0.height.equalTo(550)
         }
         
         shadowView.snp.makeConstraints {
             $0.top.leading.equalToSuperview().offset(30)
             $0.trailing.equalToSuperview().offset(-30)
-            $0.height.equalTo(600)
+            $0.height.equalTo(530)
         }
         
         clubImageView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.height.equalTo(280)
+            $0.height.equalTo(200)
         }
         
         clubTypeLabel.snp.makeConstraints {
@@ -174,6 +180,11 @@ class MyClubCollectionViewCell: UICollectionViewCell {
         clubNameLabel.snp.makeConstraints {
             $0.top.equalTo(clubTypeLabel.snp.bottom).offset(20)
             $0.leading.equalTo(clubTypeLabel)
+        }
+        
+        recrutingTypeButton.snp.makeConstraints {
+            $0.centerY.equalTo(clubNameLabel)
+            $0.leading.equalTo(clubNameLabel.snp.trailing).offset(10)
         }
         
         clubRecruitingLabel.snp.makeConstraints {
@@ -212,6 +223,9 @@ class MyClubCollectionViewCell: UICollectionViewCell {
     
     @objc func didResultEnrollButtonTapped() {
         print("등록 버튼 클릭됨")
+        
+        /// 심사 결과 등록하기 버튼 눌렀을 때 팝업 버튼 띄우기 위해 UserVC에 알림 전송
+        NotificationCenter.default.post(name: NSNotification.Name("resultButtonTapped"), object: nil)
     }
 }
 
