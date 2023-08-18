@@ -349,9 +349,9 @@
 				882791932A8FE37B0054AD1B /* Cell */,
 				DDA73AEA2A8F7B5C00C9D65A /* ApplyVC.swift */,
 				DD4AD27A2A8FEC8500451CC4 /* MakeClubVC.swift */,
+				DD02F8902A901517005F26DD /* ReportVC.swift */,
 				DD4AD27F2A8FFFC000451CC4 /* MakeButtonPopUpVC.swift */,
 				DD4AD27C2A8FF36D00451CC4 /* Cell */,
-				DD02F8902A901517005F26DD /* ReportVC.swift */,
 			);
 			path = Apply;
 			sourceTree = "<group>";

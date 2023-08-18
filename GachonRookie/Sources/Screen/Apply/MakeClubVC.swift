@@ -17,8 +17,9 @@ class MakeClubVC: UIViewController {
     // MARK: Variables
     
     /// 모집 파트 저장할 string 배열 선언
-    
     var parts = [String]()
+    
+    var isUnion: Bool = false
     
     var scrollView: UIScrollView = UIScrollView()
     
@@ -384,6 +385,14 @@ class MakeClubVC: UIViewController {
     
     @objc func didMakeButtonTapped() {
         // TODO: 데이터 전송
+        let clubName = nameTextView.text
+        let parts = "ALL"
+        let link = linkTextView.text
+        let content = contentTextView.text
+        var clubType = -1
+        
+        isUnion == true ? (clubType = 1) : (clubType = 0)
+        /// isUnion 상태까지 적어서 보내...지 않아도 될듯
         
         self.dismiss(animated: true)
     }
@@ -393,6 +402,8 @@ class MakeClubVC: UIViewController {
         schoolButton.setTitleColor(.white, for: .normal)
         unionButton.backgroundColor = .clear
         unionButton.setTitleColor(.black, for: .normal)
+        
+        isUnion = false
     }
     
     @objc func didUnionButtonTapped() {
@@ -400,6 +411,8 @@ class MakeClubVC: UIViewController {
         schoolButton.setTitleColor(.black, for: .normal)
         unionButton.backgroundColor = Main01
         unionButton.setTitleColor(.white, for: .normal)
+        
+        isUnion = true
     }
 }
 
