@@ -36,6 +36,13 @@ class MainDetailVC: UIViewController {
         $0.font = Paragraph4
     }
     
+    var reportButton: UIButton = UIButton().then {
+        $0.setTitle("리포트 보러가기 >", for: .normal)
+        $0.titleLabel?.font = CaptionText4
+        $0.setTitleColor(Gray07, for: .normal)
+        $0.addTarget(self, action: #selector(didReportButtonTapped), for: .touchUpInside)
+    }
+    
     var clubNameLabel: UILabel = UILabel().then {
         $0.text = "동아리 이름"
         $0.font = Title2
@@ -173,6 +180,7 @@ class MainDetailVC: UIViewController {
         
         [
             clubTypeLabel,
+            reportButton,
             clubNameLabel,
             recruitButton,
             linkButton
@@ -231,6 +239,11 @@ class MainDetailVC: UIViewController {
         
         clubTypeLabel.snp.makeConstraints {
             $0.top.leading.equalToSuperview().offset(30)
+        }
+        
+        reportButton.snp.makeConstraints {
+            $0.centerY.equalTo(clubTypeLabel)
+            $0.leading.equalTo(clubTypeLabel.snp.trailing).offset(5)
         }
         
         clubNameLabel.snp.makeConstraints {
@@ -347,6 +360,10 @@ class MainDetailVC: UIViewController {
         let URLView: SFSafariViewController = SFSafariViewController(url: url! as URL)
         
         self.present(URLView, animated: true, completion: nil)
+    }
+    
+    @objc func didReportButtonTapped() {
+        
     }
 }
 
