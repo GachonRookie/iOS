@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		882791952A8FE3900054AD1B /* circleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791942A8FE3900054AD1B /* circleCollectionViewCell.swift */; };
+		882791B52A9007560054AD1B /* myUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791982A9007560054AD1B /* myUserInfo.swift */; };
+		882791B62A9007560054AD1B /* MoyaWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791992A9007560054AD1B /* MoyaWrapper.swift */; };
+		882791B92A9007560054AD1B /* Base Responding Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827919C2A9007560054AD1B /* Base Responding Struct.swift */; };
+		882791BA2A9007560054AD1B /* funcList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827919D2A9007560054AD1B /* funcList.swift */; };
+		882791CE2A9009200054AD1B /* MemberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791CD2A9009200054AD1B /* MemberAPI.swift */; };
+		882791D02A9009B30054AD1B /* Member responding Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791CF2A9009B30054AD1B /* Member responding Struct.swift */; };
 		88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AAFD2A8F743600E94885 /* MainVC.swift */; };
 		88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB002A8F78FA00E94885 /* customSegmentView.swift */; };
 		88B7AB042A8F88F300E94885 /* cirtcleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */; };
@@ -81,6 +87,12 @@
 
 /* Begin PBXFileReference section */
 		882791942A8FE3900054AD1B /* circleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleCollectionViewCell.swift; sourceTree = "<group>"; };
+		882791982A9007560054AD1B /* myUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myUserInfo.swift; sourceTree = "<group>"; };
+		882791992A9007560054AD1B /* MoyaWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaWrapper.swift; sourceTree = "<group>"; };
+		8827919C2A9007560054AD1B /* Base Responding Struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Base Responding Struct.swift"; sourceTree = "<group>"; };
+		8827919D2A9007560054AD1B /* funcList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funcList.swift; sourceTree = "<group>"; };
+		882791CD2A9009200054AD1B /* MemberAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPI.swift; sourceTree = "<group>"; };
+		882791CF2A9009B30054AD1B /* Member responding Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member responding Struct.swift"; sourceTree = "<group>"; };
 		88B7AAFD2A8F743600E94885 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		88B7AB002A8F78FA00E94885 /* customSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentView.swift; sourceTree = "<group>"; };
 		88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cirtcleTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,6 +167,35 @@
 				882791942A8FE3900054AD1B /* circleCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		882791962A9007560054AD1B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				882791CC2A9009100054AD1B /* MemberAPI */,
+				882791972A9007560054AD1B /* Common */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		882791972A9007560054AD1B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				882791982A9007560054AD1B /* myUserInfo.swift */,
+				882791992A9007560054AD1B /* MoyaWrapper.swift */,
+				8827919C2A9007560054AD1B /* Base Responding Struct.swift */,
+				8827919D2A9007560054AD1B /* funcList.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		882791CC2A9009100054AD1B /* MemberAPI */ = {
+			isa = PBXGroup;
+			children = (
+				882791CD2A9009200054AD1B /* MemberAPI.swift */,
+				882791CF2A9009B30054AD1B /* Member responding Struct.swift */,
+			);
+			path = MemberAPI;
 			sourceTree = "<group>";
 		};
 		88B7AAFC2A8F742800E94885 /* Main */ = {
@@ -286,6 +327,7 @@
 				DD8E58B62A869E53007DACC7 /* AppDelegate.swift */,
 				DD8E58B82A869E53007DACC7 /* SceneDelegate.swift */,
 				DD8E58C42A869E55007DACC7 /* Info.plist */,
+				882791962A9007560054AD1B /* Network */,
 				DD60D3702A88FDAD005D6F7F /* Resources */,
 				DD60D3722A88FDCE005D6F7F /* Sources */,
 			);
@@ -512,6 +554,9 @@
 				DD4AD2792A8FC7C500451CC4 /* MainDetailVC.swift in Sources */,
 				DD8E58BB2A869E53007DACC7 /* ViewController.swift in Sources */,
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
+				882791D02A9009B30054AD1B /* Member responding Struct.swift in Sources */,
+				882791B92A9007560054AD1B /* Base Responding Struct.swift in Sources */,
+				882791CE2A9009200054AD1B /* MemberAPI.swift in Sources */,
 				DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */,
 				88B7AB042A8F88F300E94885 /* cirtcleTableViewCell.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
@@ -520,12 +565,15 @@
 				88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */,
 				DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */,
 				DDAFE6DC2A8FB435005B2D55 /* ResultPopUpVC.swift in Sources */,
+				882791BA2A9007560054AD1B /* funcList.swift in Sources */,
+				882791B52A9007560054AD1B /* myUserInfo.swift in Sources */,
 				DD60D38B2A8901BB005D6F7F /* UIImage+.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
 				88B7AB092A8FA2AC00E94885 /* circleCellData.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,
 				882791952A8FE3900054AD1B /* circleCollectionViewCell.swift in Sources */,
 				DD99AD902A8F9667005BEA59 /* MyClubCollectionViewCell.swift in Sources */,
+				882791B62A9007560054AD1B /* MoyaWrapper.swift in Sources */,
 				88B7AB062A8F917600E94885 /* colorButton.swift in Sources */,
 				DD8E58B92A869E53007DACC7 /* SceneDelegate.swift in Sources */,
 				DDA73AED2A8F7B6B00C9D65A /* UserVC.swift in Sources */,
