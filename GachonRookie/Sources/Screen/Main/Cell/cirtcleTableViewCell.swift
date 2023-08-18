@@ -43,6 +43,7 @@ class CircleTableViewCell: UITableViewCell {
         $0.contentEdgeInsets = UIEdgeInsets(top: 4, left: 13, bottom: 4, right: 13)
         $0.titleLabel?.font = .systemFont(ofSize: 11)
         $0.layer.cornerRadius = 12
+        $0.layer.borderWidth = 1
     }
     
     lazy var partButton2: colorButton = colorButton(frame: CGRect()).then {
@@ -50,6 +51,7 @@ class CircleTableViewCell: UITableViewCell {
         $0.contentEdgeInsets = UIEdgeInsets(top: 4, left: 13, bottom: 4, right: 13)
         $0.titleLabel?.font = .systemFont(ofSize: 11)
         $0.layer.cornerRadius = 12
+        $0.layer.borderWidth = 1
     }
     
     lazy var partButton3: colorButton = colorButton(frame: CGRect()).then {
@@ -57,6 +59,7 @@ class CircleTableViewCell: UITableViewCell {
         $0.contentEdgeInsets = UIEdgeInsets(top: 4, left: 13, bottom: 4, right: 13)
         $0.titleLabel?.font = .systemFont(ofSize: 11)
         $0.layer.cornerRadius = 12
+        $0.layer.borderWidth = 1
     }
     
     lazy var dotsBtn: UIButton = UIButton().then {
@@ -111,6 +114,10 @@ class CircleTableViewCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        
+    }
+    
     
     // MARK: Constraint
     
@@ -157,6 +164,31 @@ class CircleTableViewCell: UITableViewCell {
             $0.height.equalTo(25)
         }
         
+    }
+    
+    func fetchData(data:circleCellData) {
+        self.clubImageView.image = data.image
+        self.titleLabel.text = data.title
+        self.statusButton.setTitle(data.status, for: .normal)
+        changeStatusBtnbyStatus(data.status)
+        self.partButton1.titleLabel?.text = data.partList[0]
+        self.partButton2.titleLabel?.text = data.partList[1]
+        self.partButton3.titleLabel?.text = data.partList[2]
+        
+    }
+    
+    func changeStatusBtnbyStatus(_ status:String) {
+        switch status {
+        case "모집 예정":
+            statusButton.backgroundColor = Warning
+        case "모집 중":
+            statusButton.backgroundColor = Complete
+        case "모집 완료":
+            statusButton.backgroundColor = .gray.withAlphaComponent(0.5)
+            statusButton.setTitleColor(.black, for: .normal)
+        default:
+            return
+        }
     }
 }
 
