@@ -16,6 +16,7 @@
 		DD1323022A86A332009D519A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323012A86A332009D519A /* Then */; };
 		DD1323052A86A377009D519A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323042A86A377009D519A /* Moya */; };
 		DD1323082A86A3A6009D519A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323072A86A3A6009D519A /* Kingfisher */; };
+		DD4AD2792A8FC7C500451CC4 /* MainDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AD2782A8FC7C500451CC4 /* MainDetailVC.swift */; };
 		DD60D3782A88FE3F005D6F7F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */; };
 		DD60D3792A88FE3F005D6F7F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */; };
 		DD60D37A2A88FE3F005D6F7F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */; };
@@ -81,6 +82,7 @@
 		88B7AB002A8F78FA00E94885 /* customSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentView.swift; sourceTree = "<group>"; };
 		88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cirtcleTableViewCell.swift; sourceTree = "<group>"; };
 		88B7AB052A8F917600E94885 /* colorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorButton.swift; sourceTree = "<group>"; };
+		DD4AD2782A8FC7C500451CC4 /* MainDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailVC.swift; sourceTree = "<group>"; };
 		DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DD60D3752A88FE3F005D6F7F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		DD60D3762A88FE3F005D6F7F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -146,8 +148,9 @@
 		88B7AAFC2A8F742800E94885 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				88B7AB022A8F88D400E94885 /* Cell */,
 				88B7AAFD2A8F743600E94885 /* MainVC.swift */,
+				DD4AD2782A8FC7C500451CC4 /* MainDetailVC.swift */,
+				88B7AB022A8F88D400E94885 /* Cell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA73AEF2A8F7B7600C9D65A /* ReportVC.swift in Sources */,
+				DD4AD2792A8FC7C500451CC4 /* MainDetailVC.swift in Sources */,
 				DD8E58BB2A869E53007DACC7 /* ViewController.swift in Sources */,
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
 				DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */,
