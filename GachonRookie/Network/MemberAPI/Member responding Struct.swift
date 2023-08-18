@@ -19,6 +19,7 @@ struct data_getMainPage: Codable {
 }
 
 // MARK: - NewClubResponse
+/// 상단 동아리
 struct NewClubResponse: Codable {
     let clubID: Int
     let clubName, logourl: String
@@ -30,6 +31,7 @@ struct NewClubResponse: Codable {
 }
 
 // MARK: - NotNewClubResponseList
+/// 테이블 뷰 동아리
 struct NotNewClubResponseList: Codable {
     let recruitID: Int
     let clubName: String
@@ -65,6 +67,7 @@ struct Part: Codable {
 struct ClubID: Codable {
     let createdAt, updatedAt, status: String
     let clubID: Int
+    // INTERNAL, UNION
     let clubName, clubTag, adContent, snsLink: String
     let logoURL: String
 
