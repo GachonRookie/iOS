@@ -155,6 +155,8 @@ class MainDetailVC: UIViewController {
     
     func setUpView() {
         view.backgroundColor = Gray01
+        
+        tabBarController?.tabBar.isHidden = true
     }
     
     

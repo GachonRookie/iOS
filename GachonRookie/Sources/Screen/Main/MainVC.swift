@@ -41,6 +41,10 @@ class MainVC: UIViewController {
     lazy var clubTableView = UITableView().then {
         $0.backgroundColor = .gray
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -178,7 +182,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         return 120
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(MainDetailVC(), animated: true)
+    }
 }
 
 
