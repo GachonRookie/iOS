@@ -16,8 +16,26 @@ class UserVC: UIViewController {
 
     // MARK: Variables
     
+    var isUnion: Int = 0
+    var userName: String = "유진"
+    var clubName: String = "브로콜리협의회"
+    var recruitStartDate: String = "2023-08-20"
+    var recruitEndDate: String = "2023-08-26"
+    var typeName: String = "iOS"
+    var numOfRecruit: Int = 33
+    var numOflastApply: Int = 66
+    var numOfLastPass: Int = 28
+    
+    let dateFormat: DateFormatter = DateFormatter().then {
+        $0.dateFormat = "yyyy-MM-dd"
+    }
+    
+    lazy var convertRecruitStartDate = Calendar.current.dateComponents([.year, .month, .day], from: dateFormat.date(from: recruitStartDate)!)
+    
+    lazy var convertRecruitEndDate = Calendar.current.dateComponents([.year, .month, .day], from: dateFormat.date(from: recruitEndDate)!)
+    
     lazy var myClubLabel: UILabel = UILabel().then {
-        $0.text = "username님이 찜한 동아리예요."
+        $0.text = "\(userName)님이 찜한 동아리예요."
         $0.font = Title3
     }
     
@@ -113,6 +131,7 @@ extension UserVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyClubCollectionViewCell().cellID, for: indexPath) as? MyClubCollectionViewCell else { return UICollectionViewCell() }
         
+        cell.clubNameLabel.text = clubName
         
         return cell
     }

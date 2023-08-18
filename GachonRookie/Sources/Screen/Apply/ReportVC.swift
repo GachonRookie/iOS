@@ -16,6 +16,8 @@ class ReportVC: UIViewController {
 
     // MARK: Variables
     
+    var numOfReport: Int = 3
+    
     var parts = [String]()
     
     var scrollView: UIScrollView = UIScrollView()
@@ -37,9 +39,9 @@ class ReportVC: UIViewController {
         $0.addTarget(self, action: #selector(didBackButtonTapped), for: .touchUpInside)
     }
     
-    var nameLabel: UILabel = UILabel().then {
+    lazy var nameLabel: UILabel = UILabel().then {
         $0.font = Title3
-        $0.text = "nn개의 레포트"
+        $0.text = "\(numOfReport)개의 레포트"
     }
     
     var tableView: UITableView = UITableView().then {
@@ -226,7 +228,7 @@ class ReportVC: UIViewController {
 
 extension ReportVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return numOfReport
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
