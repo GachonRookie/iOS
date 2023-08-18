@@ -111,7 +111,7 @@ class MakeClubVC: UIViewController {
     
     var linkLabel: UILabel = UILabel().then {
         $0.font = Title3
-        $0.text = "지원 글 링크"
+        $0.text = "SNS 링크"
     }
     
     var linkDescriptionLabel: UILabel = UILabel().then {
@@ -408,14 +408,14 @@ class MakeClubVC: UIViewController {
 
 extension MakeClubVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return parts.count + 1
+        return parts.count + 2
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecruitTypeCollectionViewCell().cellID, for: indexPath) as? RecruitTypeCollectionViewCell else { return UICollectionViewCell() }
         
-        if indexPath.row == parts.count {
+        if indexPath.row == parts.count + 1 {
             cell.recrutingTypeButton.setTitle("추가 +", for: .normal)
         }
         
@@ -424,7 +424,7 @@ extension MakeClubVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 70, height: collectionView.frame.height)
+        return CGSize(width: 30, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

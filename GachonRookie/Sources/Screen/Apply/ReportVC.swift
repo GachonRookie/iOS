@@ -34,6 +34,7 @@ class ReportVC: UIViewController {
     var backButton: UIButton = UIButton().then {
         $0.setImage(UIImage(systemName: "xmark"), for: .normal)
         $0.tintColor = Black
+        $0.addTarget(self, action: #selector(didBackButtonTapped), for: .touchUpInside)
     }
     
     var nameLabel: UILabel = UILabel().then {
@@ -79,6 +80,10 @@ class ReportVC: UIViewController {
     
     func setUpView() {
         view.backgroundColor = .white
+        
+        //my_setKeyboardObserver()
+        setKeyboardObserver()
+        hideKeyboard()
     }
     
     
@@ -176,6 +181,43 @@ class ReportVC: UIViewController {
             $0.centerY.equalToSuperview()
             $0.trailing.equalToSuperview().offset(-25)
         }
+    }
+    
+//    func my_setKeyboardObserver() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.my_keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.my_keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object:nil)
+//    }
+//
+//    @objc func my_keyboardWillShow(notification: NSNotification) {
+//          if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//                  let keyboardRectangle = keyboardFrame.cgRectValue
+//                  let keyboardHeight = keyboardRectangle.height
+//              UIView.animate(withDuration: 1) {
+////                  self.view.window?.frame.origin.y -= keyboardHeight
+//                  self.commentBackgroundView.frame.origin.y -= keyboardHeight
+//              }
+//          }
+//      }
+//
+//    @objc func my_keyboardWillHide(notification: NSNotification) {
+//        if self.view.window?.frame.origin.y != 0 {
+//            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//                    let keyboardRectangle = keyboardFrame.cgRectValue
+//                    let keyboardHeight = keyboardRectangle.height
+//                UIView.animate(withDuration: 1) {
+////                    self.view.window?.frame.origin.y += keyboardHeight
+//                    self.commentBackgroundView.frame.origin.y += keyboardHeight
+//                }
+//            }
+//        }
+//    }
+    
+    
+    // MARK: Extension
+    
+    @objc func didBackButtonTapped() {
+        self.dismiss(animated: true)
     }
 }
 

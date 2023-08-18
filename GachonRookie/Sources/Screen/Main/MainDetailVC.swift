@@ -49,7 +49,7 @@ class MainDetailVC: UIViewController {
     }
     
     var recruitButton: UIButton = UIButton().then {
-        $0.setTitle("지원 링크", for: .normal)
+        $0.setTitle("SNS", for: .normal)
         $0.titleLabel?.font = CaptionText1
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 14
@@ -363,7 +363,11 @@ class MainDetailVC: UIViewController {
     }
     
     @objc func didReportButtonTapped() {
+        let reportVC = ReportVC()
+        reportVC.modalTransitionStyle = .coverVertical
+        reportVC.modalPresentationStyle = .fullScreen
         
+        self.present(reportVC, animated: true)
     }
 }
 
