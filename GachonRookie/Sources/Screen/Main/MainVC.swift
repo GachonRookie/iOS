@@ -36,6 +36,11 @@ class MainVC: UIViewController {
     lazy var selectedLine = UIView().then {
         $0.backgroundColor = Main01
     }
+    
+    // 세그먼트 아래 tableView
+    lazy var clubTableView = UITableView().then {
+        $0.backgroundColor = .gray
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +63,8 @@ class MainVC: UIViewController {
         [
             segmentControl,
             underLine,
-            selectedLine
+            selectedLine,
+            clubTableView
         ].forEach { view.addSubview($0) }
     }
     
@@ -70,9 +76,10 @@ class MainVC: UIViewController {
     // MARK: Constraint
     func setUpConstraint() {
         segmentControl.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(400)
-            $0.centerY.equalToSuperview()
+            $0.top.equalToSuperview().offset(300)
+            $0.centerX.equalToSuperview()
             $0.width.equalToSuperview()
+            $0.height.equalTo(50)
         }
         
         underLine.snp.makeConstraints {
@@ -80,12 +87,18 @@ class MainVC: UIViewController {
             $0.height.equalTo(3)
             $0.top.equalTo(segmentControl.snp.bottom)
         }
-        
+
         selectedLine.snp.makeConstraints {
             $0.width.equalToSuperview().dividedBy(segmentControl.numberOfSegments)
             $0.height.equalTo(3)
             $0.top.equalTo(segmentControl.snp.bottom)
             $0.leading.equalToSuperview().offset(0)
+        }
+
+        clubTableView.snp.makeConstraints {
+            $0.width.equalToSuperview()
+            $0.top.equalTo(underLine.snp.bottom)
+            $0.bottom.equalToSuperview()
         }
     }
     
