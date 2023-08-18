@@ -18,6 +18,9 @@
 		DD1323052A86A377009D519A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323042A86A377009D519A /* Moya */; };
 		DD1323082A86A3A6009D519A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323072A86A3A6009D519A /* Kingfisher */; };
 		DD4AD2792A8FC7C500451CC4 /* MainDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AD2782A8FC7C500451CC4 /* MainDetailVC.swift */; };
+		DD4AD27B2A8FEC8500451CC4 /* MakeClubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AD27A2A8FEC8500451CC4 /* MakeClubVC.swift */; };
+		DD4AD27E2A8FF39900451CC4 /* RecruitTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AD27D2A8FF39900451CC4 /* RecruitTypeCollectionViewCell.swift */; };
+		DD4AD2802A8FFFC000451CC4 /* MakeButtonPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AD27F2A8FFFC000451CC4 /* MakeButtonPopUpVC.swift */; };
 		DD60D3782A88FE3F005D6F7F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */; };
 		DD60D3792A88FE3F005D6F7F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */; };
 		DD60D37A2A88FE3F005D6F7F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */; };
@@ -83,8 +86,11 @@
 		88B7AB002A8F78FA00E94885 /* customSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentView.swift; sourceTree = "<group>"; };
 		88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cirtcleTableViewCell.swift; sourceTree = "<group>"; };
 		88B7AB052A8F917600E94885 /* colorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorButton.swift; sourceTree = "<group>"; };
-		DD4AD2782A8FC7C500451CC4 /* MainDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailVC.swift; sourceTree = "<group>"; };
 		88B7AB082A8FA2AC00E94885 /* circleCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleCellData.swift; sourceTree = "<group>"; };
+		DD4AD2782A8FC7C500451CC4 /* MainDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailVC.swift; sourceTree = "<group>"; };
+		DD4AD27A2A8FEC8500451CC4 /* MakeClubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeClubVC.swift; sourceTree = "<group>"; };
+		DD4AD27D2A8FF39900451CC4 /* RecruitTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD4AD27F2A8FFFC000451CC4 /* MakeButtonPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeButtonPopUpVC.swift; sourceTree = "<group>"; };
 		DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DD60D3752A88FE3F005D6F7F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		DD60D3762A88FE3F005D6F7F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -180,6 +186,14 @@
 				88B7AB082A8FA2AC00E94885 /* circleCellData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD4AD27C2A8FF36D00451CC4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AD27D2A8FF39900451CC4 /* RecruitTypeCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DD60D3702A88FDAD005D6F7F /* Resources */ = {
@@ -329,6 +343,9 @@
 			isa = PBXGroup;
 			children = (
 				DDA73AEA2A8F7B5C00C9D65A /* ApplyVC.swift */,
+				DD4AD27A2A8FEC8500451CC4 /* MakeClubVC.swift */,
+				DD4AD27F2A8FFFC000451CC4 /* MakeButtonPopUpVC.swift */,
+				DD4AD27C2A8FF36D00451CC4 /* Cell */,
 			);
 			path = Apply;
 			sourceTree = "<group>";
@@ -505,11 +522,13 @@
 				88B7AB042A8F88F300E94885 /* cirtcleTableViewCell.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
 				88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */,
+				DD4AD2802A8FFFC000451CC4 /* MakeButtonPopUpVC.swift in Sources */,
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
 				88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */,
 				DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */,
 				DDAFE6DC2A8FB435005B2D55 /* ResultPopUpVC.swift in Sources */,
 				DD60D38B2A8901BB005D6F7F /* UIImage+.swift in Sources */,
+				DD4AD27E2A8FF39900451CC4 /* RecruitTypeCollectionViewCell.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
 				88B7AB092A8FA2AC00E94885 /* circleCellData.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,
@@ -517,6 +536,7 @@
 				88B7AB062A8F917600E94885 /* colorButton.swift in Sources */,
 				DD8E58B92A869E53007DACC7 /* SceneDelegate.swift in Sources */,
 				DDA73AED2A8F7B6B00C9D65A /* UserVC.swift in Sources */,
+				DD4AD27B2A8FEC8500451CC4 /* MakeClubVC.swift in Sources */,
 				DD60D38F2A8901CF005D6F7F /* UIColor+.swift in Sources */,
 				DDA73AEB2A8F7B5C00C9D65A /* ApplyVC.swift in Sources */,
 			);
