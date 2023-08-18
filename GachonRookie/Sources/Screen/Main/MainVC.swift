@@ -120,6 +120,10 @@ class MainVC: UIViewController {
         $0.separatorInset.left = 15
         $0.separatorInset.right = 15
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -358,7 +362,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         return 120
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(MainDetailVC(), animated: true)
+    }
 }
 
 
