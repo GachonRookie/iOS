@@ -51,6 +51,7 @@
 		DDA73AEB2A8F7B5C00C9D65A /* ApplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEA2A8F7B5C00C9D65A /* ApplyVC.swift */; };
 		DDA73AED2A8F7B6B00C9D65A /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */; };
 		DDA73AEF2A8F7B7600C9D65A /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEE2A8F7B7600C9D65A /* ReportVC.swift */; };
+		DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		DDA73AEA2A8F7B5C00C9D65A /* ApplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyVC.swift; sourceTree = "<group>"; };
 		DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		DDA73AEE2A8F7B7600C9D65A /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				DD8E58C12A869E55007DACC7 /* LaunchScreen.storyboard */,
 				DD8E58BA2A869E53007DACC7 /* ViewController.swift */,
 				DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */,
+				DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */,
 				88B7AAFC2A8F742800E94885 /* Main */,
 				DDA73AE92A8F7B3A00C9D65A /* Apply */,
 				DDA73AE82A8F7B2400C9D65A /* User */,
@@ -444,6 +447,7 @@
 				DDA73AEF2A8F7B7600C9D65A /* ReportVC.swift in Sources */,
 				DD8E58BB2A869E53007DACC7 /* ViewController.swift in Sources */,
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
+				DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
 				88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */,
