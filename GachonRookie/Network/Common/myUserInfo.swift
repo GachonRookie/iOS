@@ -20,10 +20,18 @@ public class MyInfo {
     }
     
     /// 현재 유저의 access 토큰입니다
-    var myAccessToken: String?
+    var myAccessToken: String?{
+        didSet {
+            print("myAccessToken changed : \(myInfo.myAccessToken!)")
+        }
+    }
     
     /// 현재 유저의 refresh 토큰입니다
-    var myRefreshToken: String?
+    var myRefreshToken: String?{
+        didSet {
+            print("myRefreshToken changed : \(myInfo.myRefreshToken!)")
+        }
+    }
     
     var myID: Int? {
         didSet {
