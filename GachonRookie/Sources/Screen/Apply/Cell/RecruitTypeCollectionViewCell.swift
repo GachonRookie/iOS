@@ -19,7 +19,7 @@ class RecruitTypeCollectionViewCell: UICollectionViewCell {
     var cellID = "recruitCTypeCell"
     
     var recrutingTypeButton: colorButton = colorButton(frame: CGRect()).then {
-        $0.setColorAndTitle(title: "iOS", titleColor: Black, backgroundColor: .clear, borderColor: Main01.cgColor)
+        $0.setColorAndTitle(title: "ALL", titleColor: Black, backgroundColor: .clear, borderColor: Main01.cgColor)
         
     }
     
