@@ -232,7 +232,25 @@ extension ReportVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReportTableViewCell().cellID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReportTableViewCell().cellID, for: indexPath) as! ReportTableViewCell
+        
+        
+        switch indexPath.row {
+        case 0:
+            cell.nameLabel.text = "램프"
+            cell.commentLabel.text = "UMC 데모데이 관련 안내 사항이 있어 공지드립니다.\n이번 데모데이 티켓은 데모데이 출입증으로 사용됩니다."
+            cell.dateLabel.text = "2023.07.23"
+        case 1:
+            cell.nameLabel.text = "로딩"
+            cell.commentLabel.text = "이번에도 마찬가지일 것으로 예상되니 반드시 선착순임을 유의해서 구글폼을 제출해 주세요. 참가한 PM분들은 모두 알고 계시겠지만 혹시 모르니 팀 내에서 한 번씩 확인 부탁드립니다."
+            cell.dateLabel.text = "2023.07.28"
+        case 2:
+            cell.nameLabel.text = "짐깅"
+            cell.commentLabel.text = "데모데이에 무조건 참석할 수 있는 것은 아니고, 추후에 중앙에서 날짜별로 신청을 받을 예정입니다."
+            cell.dateLabel.text = "2023.08.10"
+        default : break
+        }
+        
         
         return cell
     }
