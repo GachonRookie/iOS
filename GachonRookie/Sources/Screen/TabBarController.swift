@@ -24,14 +24,9 @@ class TabBarController: UITabBarController {
         mainVC.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
         
         let applyVC = ApplyVC()
-        applyVC.tabBarItem.title = "지원"
+        applyVC.tabBarItem.title = "문의/등록"
         applyVC.tabBarItem.image = UIImage(systemName: "envelope")
         applyVC.tabBarItem.selectedImage = UIImage(systemName: "envelope.fill")
-        
-        let reportVC = ReportVC()
-        reportVC.tabBarItem.title = "등록"
-        reportVC.tabBarItem.image = UIImage(systemName: "pencil")
-        reportVC.tabBarItem.selectedImage = UIImage(systemName: "pencil.line")
         
         let mypageVC = UserVC()
         mypageVC.tabBarItem.title = "마이"
@@ -55,7 +50,6 @@ class TabBarController: UITabBarController {
         
         let mainNavigationController = UINavigationController(rootViewController: mainVC)
         let applyNavigationController = UINavigationController(rootViewController: applyVC)
-        let reportNavigationController = UINavigationController(rootViewController: reportVC)
         let mypageNavigationController = UINavigationController(rootViewController: mypageVC)
         
         
@@ -63,7 +57,6 @@ class TabBarController: UITabBarController {
         [
             mainNavigationController,
             applyNavigationController,
-            reportNavigationController,
             mypageNavigationController
         ].forEach {
             $0.navigationBar.tintColor = .black
@@ -72,7 +65,6 @@ class TabBarController: UITabBarController {
         [
             mainVC,
             applyVC,
-            reportVC,
             mypageVC
         ].forEach {
             $0.title = ""
@@ -84,7 +76,6 @@ class TabBarController: UITabBarController {
         
         setViewControllers([mainNavigationController,
                             applyNavigationController,
-                            reportNavigationController,
                             mypageNavigationController], animated: true)
     }
 }
