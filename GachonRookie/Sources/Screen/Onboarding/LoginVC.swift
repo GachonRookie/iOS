@@ -17,6 +17,18 @@ class LoginVC: UIViewController {
 
     // MARK: Variables
     
+    var logoImageView: UIImageView = UIImageView().then {
+        $0.image = UIImage(named: "Logo")
+        $0.clipsToBounds = true
+        $0.contentMode = .scaleAspectFill
+    }
+    
+    var descriptionLabel: UILabel = UILabel().then {
+        $0.text = "동아리의 첫 시작, 동방"
+        $0.font = Paragraph2
+        $0.textColor = White
+    }
+    
     var appleLoginButton: ASAuthorizationAppleIDButton = ASAuthorizationAppleIDButton().then {
         $0.addTarget(self, action: #selector(didAppleButtonTapped), for: .touchUpInside)
     }
@@ -42,6 +54,8 @@ class LoginVC: UIViewController {
     
     func setUpLayout() {
         [
+            logoImageView,
+            descriptionLabel,
             appleLoginButton
         ].forEach { view.addSubview($0) }
     }
@@ -56,8 +70,18 @@ class LoginVC: UIViewController {
     // MARK: Constraint
     
     func setUpConstraint() {
+        logoImageView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(-50)
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(20)
+        }
+        
         appleLoginButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().offset(-60)
+            $0.bottom.equalToSuperview().offset(-90)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(50)
