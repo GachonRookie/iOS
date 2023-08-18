@@ -14,6 +14,9 @@
 		882791BA2A9007560054AD1B /* funcList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827919D2A9007560054AD1B /* funcList.swift */; };
 		882791CE2A9009200054AD1B /* MemberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791CD2A9009200054AD1B /* MemberAPI.swift */; };
 		882791D02A9009B30054AD1B /* Member responding Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791CF2A9009B30054AD1B /* Member responding Struct.swift */; };
+		882791D32A901A350054AD1B /* ClubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791D22A901A350054AD1B /* ClubAPI.swift */; };
+		882791D52A901A400054AD1B /* Club responding Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791D42A901A400054AD1B /* Club responding Struct.swift */; };
+		882791D72A901A710054AD1B /* Club sending Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882791D62A901A710054AD1B /* Club sending Struct.swift */; };
 		88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AAFD2A8F743600E94885 /* MainVC.swift */; };
 		88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB002A8F78FA00E94885 /* customSegmentView.swift */; };
 		88B7AB042A8F88F300E94885 /* cirtcleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */; };
@@ -97,6 +100,9 @@
 		8827919D2A9007560054AD1B /* funcList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funcList.swift; sourceTree = "<group>"; };
 		882791CD2A9009200054AD1B /* MemberAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPI.swift; sourceTree = "<group>"; };
 		882791CF2A9009B30054AD1B /* Member responding Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member responding Struct.swift"; sourceTree = "<group>"; };
+		882791D22A901A350054AD1B /* ClubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubAPI.swift; sourceTree = "<group>"; };
+		882791D42A901A400054AD1B /* Club responding Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club responding Struct.swift"; sourceTree = "<group>"; };
+		882791D62A901A710054AD1B /* Club sending Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Club sending Struct.swift"; sourceTree = "<group>"; };
 		88B7AAFD2A8F743600E94885 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		88B7AB002A8F78FA00E94885 /* customSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentView.swift; sourceTree = "<group>"; };
 		88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cirtcleTableViewCell.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		882791962A9007560054AD1B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				882791D12A901A1C0054AD1B /* ClubAPI */,
 				882791CC2A9009100054AD1B /* MemberAPI */,
 				882791972A9007560054AD1B /* Common */,
 			);
@@ -204,6 +211,16 @@
 				882791CF2A9009B30054AD1B /* Member responding Struct.swift */,
 			);
 			path = MemberAPI;
+			sourceTree = "<group>";
+		};
+		882791D12A901A1C0054AD1B /* ClubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				882791D22A901A350054AD1B /* ClubAPI.swift */,
+				882791D42A901A400054AD1B /* Club responding Struct.swift */,
+				882791D62A901A710054AD1B /* Club sending Struct.swift */,
+			);
+			path = ClubAPI;
 			sourceTree = "<group>";
 		};
 		88B7AAFC2A8F742800E94885 /* Main */ = {
@@ -568,12 +585,14 @@
 				882791D02A9009B30054AD1B /* Member responding Struct.swift in Sources */,
 				882791B92A9007560054AD1B /* Base Responding Struct.swift in Sources */,
 				882791CE2A9009200054AD1B /* MemberAPI.swift in Sources */,
+				882791D72A901A710054AD1B /* Club sending Struct.swift in Sources */,
 				DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */,
 				88B7AB042A8F88F300E94885 /* cirtcleTableViewCell.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
 				88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */,
 				DD4AD2802A8FFFC000451CC4 /* MakeButtonPopUpVC.swift in Sources */,
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
+				882791D32A901A350054AD1B /* ClubAPI.swift in Sources */,
 				88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */,
 				DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */,
 				DDAFE6DC2A8FB435005B2D55 /* ResultPopUpVC.swift in Sources */,
@@ -583,6 +602,7 @@
 				DD4AD27E2A8FF39900451CC4 /* RecruitTypeCollectionViewCell.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
 				88B7AB092A8FA2AC00E94885 /* circleCellData.swift in Sources */,
+				882791D52A901A400054AD1B /* Club responding Struct.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,
 				882791952A8FE3900054AD1B /* circleCollectionViewCell.swift in Sources */,
 				DD02F8932A90162E005F26DD /* ReportTableViewCell.swift in Sources */,
