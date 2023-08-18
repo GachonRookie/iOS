@@ -19,7 +19,7 @@ class MainVC: UIViewController {
     private var tableViewIndex: Int = 0
     
     /// 닉네임 받아오기
-    var nickName: String = "로딩"
+    var nickName: String = "유짐"
     var frontImage: UIImage = UIImage(named: "moonChang")!
     var circleName: String = "문예창작단"
     

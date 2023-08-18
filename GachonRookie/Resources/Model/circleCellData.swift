@@ -20,8 +20,8 @@ struct circleCellData {
 let Dummy_circleCellDataList: [circleCellData] = [
     circleCellData(image: UIImage(named: "umcImage")!, title: "가천대학교 UMC", status: "모집 예정", partList: ["서버", "안드로이드", "iOS"], tag: "연합", statusTag: "활동 중"),
     circleCellData(image: UIImage(named: "moonChang")!, title: "문예창작단", status: "모집 중", partList: ["기타", "보컬", "베이스"], tag: "연합", statusTag: "활동 중"),
-    circleCellData(image: UIImage(named: "takeout")!, title: "테이크아웃", status: "모집 완료", partList: ["로봇", "인공지능", "자율주행"], tag: "교내", statusTag: "활동 중"),
-    circleCellData(image: UIImage(named: "roaming")!, title: "로밍", status: "모집 중", partList: ["롤", "내전", "게임"], tag: "연합", statusTag: "활동 중"),
+    circleCellData(image: UIImage(named: "takeout")!, title: "테이크아웃", status: "모집 완료", partList: ["로봇", "인공지능", "자율주행"], tag: "교내", statusTag: "폐지"),
+    circleCellData(image: UIImage(named: "roaming")!, title: "로밍", status: "모집 중", partList: ["롤", "내전", "게임"], tag: "연합", statusTag: "폐지"),
     circleCellData(image: UIImage(named: "payload")!, title: "페이로드", status: "모집 예정", partList: ["보안", "정보", "정보보안"], tag: "교내", statusTag: "활동 중"),
     circleCellData(image: UIImage(named: "elc")!, title: "ELC", status: "모집 중", partList: ["연합", "경제", "대외활동"], tag: "연합", statusTag: "활동 중"),
     circleCellData(image: UIImage(named: "enjoy")!, title: "엔조이리스크", status: "모집 완료", partList: ["경제", "임원진", "회원"], tag: "교내", statusTag: "활동 중"),
