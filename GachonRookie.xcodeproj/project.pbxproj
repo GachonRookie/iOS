@@ -52,6 +52,7 @@
 		DDA73AED2A8F7B6B00C9D65A /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */; };
 		DDA73AEF2A8F7B7600C9D65A /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AEE2A8F7B7600C9D65A /* ReportVC.swift */; };
 		DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */; };
+		DDE316E82A8F8BBC0063754A /* MyClubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE316E72A8F8BBC0063754A /* MyClubTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		DDA73AEE2A8F7B7600C9D65A /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		DDA73AF02A8F7BFC00C9D65A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DDE316E72A8F8BBC0063754A /* MyClubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 		DDA73AE82A8F7B2400C9D65A /* User */ = {
 			isa = PBXGroup;
 			children = (
+				DDE316E62A8F8BA20063754A /* Cell */,
 				DDA73AEC2A8F7B6B00C9D65A /* UserVC.swift */,
 			);
 			path = User;
@@ -286,6 +289,14 @@
 				DDA73AEA2A8F7B5C00C9D65A /* ApplyVC.swift */,
 			);
 			path = Apply;
+			sourceTree = "<group>";
+		};
+		DDE316E62A8F8BA20063754A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DDE316E72A8F8BBC0063754A /* MyClubTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +458,7 @@
 				DDA73AEF2A8F7B7600C9D65A /* ReportVC.swift in Sources */,
 				DD8E58BB2A869E53007DACC7 /* ViewController.swift in Sources */,
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
+				DDE316E82A8F8BBC0063754A /* MyClubTableViewCell.swift in Sources */,
 				DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,

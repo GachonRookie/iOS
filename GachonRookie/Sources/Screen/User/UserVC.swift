@@ -15,6 +15,15 @@ import Then
 class UserVC: UIViewController {
 
     // MARK: Variables
+    
+    lazy var myClubLabel: UILabel = UILabel().then {
+        $0.text = "username님이 찜한 동아리예요."
+        $0.font = Title3
+    }
+    
+    lazy var myClubTableView: UITableView = UITableView().then {
+        $0.backgroundColor = .blue
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +38,7 @@ class UserVC: UIViewController {
     // MARK: View
     
     func setUpView() {
-        
+        view.backgroundColor = .white
     }
     
     
@@ -37,7 +46,8 @@ class UserVC: UIViewController {
     
     func setUpLayout() {
         [
-            
+            myClubLabel,
+            myClubTableView
         ].forEach { view.addSubview($0) }
     }
     
@@ -51,7 +61,9 @@ class UserVC: UIViewController {
     // MARK: Constraint
     
     func setUpConstraint() {
-        
+        myClubLabel.snp.makeConstraints {
+            $0.top.leading.equalTo(view.safeAreaLayoutGuide).offset(30)
+        }
     }
     
 }
