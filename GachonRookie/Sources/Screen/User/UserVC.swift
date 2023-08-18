@@ -21,8 +21,13 @@ class UserVC: UIViewController {
         $0.font = Title3
     }
     
-    lazy var myClubTableView: UITableView = UITableView().then {
-        $0.backgroundColor = .blue
+    lazy var myClubCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
+        $0.scrollDirection = .horizontal
+        $0.minimumLineSpacing = 20
+        $0.minimumInteritemSpacing = 20
+    }).then {
+        $0.showsHorizontalScrollIndicator = false
+        $0.register(MyClubCollectionViewCell.self, forCellWithReuseIdentifier: MyClubCollectionViewCell().cellID)
     }
 
     override func viewDidLoad() {
@@ -47,14 +52,15 @@ class UserVC: UIViewController {
     func setUpLayout() {
         [
             myClubLabel,
-            myClubTableView
+            myClubCollectionView
         ].forEach { view.addSubview($0) }
     }
     
     // MARK: Delegate
     
     func setUpDelegate() {
-        
+        myClubCollectionView.dataSource = self
+        myClubCollectionView.delegate = self
     }
     
     
@@ -64,6 +70,35 @@ class UserVC: UIViewController {
         myClubLabel.snp.makeConstraints {
             $0.top.leading.equalTo(view.safeAreaLayoutGuide).offset(30)
         }
+        
+        myClubCollectionView.snp.makeConstraints {
+            $0.top.equalTo(myClubLabel.snp.bottom).offset(40)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-20)
+            $0.height.equalTo(680)
+        }
+    }
+}
+
+
+// MARK: Extension
+
+extension UserVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyClubCollectionViewCell().cellID, for: indexPath) as? MyClubCollectionViewCell else { return UICollectionViewCell() }
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
 }
