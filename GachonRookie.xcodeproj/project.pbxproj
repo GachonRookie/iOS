@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AAFD2A8F743600E94885 /* MainVC.swift */; };
+		88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB002A8F78FA00E94885 /* customSegmentView.swift */; };
 		DD1322FC2A86A30F009D519A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DD1322FB2A86A30F009D519A /* Alamofire */; };
 		DD1322FF2A86A323009D519A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD1322FE2A86A323009D519A /* SnapKit */; };
 		DD1323022A86A332009D519A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323012A86A332009D519A /* Then */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		88B7AAFD2A8F743600E94885 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		88B7AB002A8F78FA00E94885 /* customSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentView.swift; sourceTree = "<group>"; };
 		DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DD60D3752A88FE3F005D6F7F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		DD60D3762A88FE3F005D6F7F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		88B7AAFF2A8F78E600E94885 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88B7AB002A8F78FA00E94885 /* customSegmentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DD60D3702A88FDAD005D6F7F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		DD60D3732A88FDE7005D6F7F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				88B7AAFF2A8F78E600E94885 /* View */,
 				DD8E58C12A869E55007DACC7 /* LaunchScreen.storyboard */,
 				DD8E58BA2A869E53007DACC7 /* ViewController.swift */,
 				DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */,
@@ -449,6 +460,7 @@
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
 				DDA73AF12A8F7BFC00C9D65A /* TabBarController.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
+				88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */,
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
 				88B7AAFE2A8F743600E94885 /* MainVC.swift in Sources */,
 				DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */,
