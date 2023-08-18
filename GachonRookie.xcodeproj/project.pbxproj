@@ -46,6 +46,7 @@
 		DD8E58DA2A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E58D92A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift */; };
 		DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73ADB2A8F2B9000C9D65A /* UIViewController+.swift */; };
 		DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */; };
+		DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73AE22A8F462300C9D65A /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		DD8E58D92A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachonRookieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DDA73ADB2A8F2B9000C9D65A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DDA73AE22A8F462300C9D65A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DDA73AE62A8F4A8D00C9D65A /* GachonRookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GachonRookie.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 				DD8E58C12A869E55007DACC7 /* LaunchScreen.storyboard */,
 				DD8E58BA2A869E53007DACC7 /* ViewController.swift */,
 				DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */,
+				DDA73ADF2A8F45F100C9D65A /* Onboarding */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -202,6 +206,7 @@
 		DD8E58B52A869E53007DACC7 /* GachonRookie */ = {
 			isa = PBXGroup;
 			children = (
+				DDA73AE62A8F4A8D00C9D65A /* GachonRookie.entitlements */,
 				DD8E58B62A869E53007DACC7 /* AppDelegate.swift */,
 				DD8E58B82A869E53007DACC7 /* SceneDelegate.swift */,
 				DD8E58C42A869E55007DACC7 /* Info.plist */,
@@ -226,6 +231,14 @@
 				DD8E58D92A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift */,
 			);
 			path = GachonRookieUITests;
+			sourceTree = "<group>";
+		};
+		DDA73ADF2A8F45F100C9D65A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DDA73AE22A8F462300C9D65A /* LoginVC.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +401,7 @@
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
 				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
 				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
+				DDA73AE32A8F462300C9D65A /* LoginVC.swift in Sources */,
 				DD60D38B2A8901BB005D6F7F /* UIImage+.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,
@@ -567,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GachonRookie/GachonRookie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DF5SKQK2R;
@@ -594,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GachonRookie/GachonRookie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DF5SKQK2R;
