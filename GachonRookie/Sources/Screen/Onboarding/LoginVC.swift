@@ -34,7 +34,7 @@ class LoginVC: UIViewController {
     // MARK: View
     
     func setUpView() {
-        view.backgroundColor = .white
+        view.backgroundColor = Main01
     }
     
     
@@ -115,6 +115,6 @@ extension LoginVC: ASAuthorizationControllerDelegate, ASAuthorizationControllerP
 struct LoginVC_Preview: PreviewProvider {
     static var previews: some View {
         LoginVC().toPreview()
-            // .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
     }
 }
