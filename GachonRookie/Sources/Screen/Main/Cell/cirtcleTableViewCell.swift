@@ -23,6 +23,7 @@ class CircleTableViewCell: UITableViewCell {
         $0.layer.cornerRadius = 20
         $0.clipsToBounds = true
         $0.backgroundColor = .gray
+        $0.contentMode = .scaleAspectFill
     }
     
     lazy var titleLabel:UILabel = UILabel().then {

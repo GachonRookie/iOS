@@ -19,8 +19,8 @@ class MainVC: UIViewController {
     private var tableViewIndex: Int = 0
     
     /// 닉네임 받아오기
-    var nickName: String = "유짐asdf"
-    var frontImage: UIImage = UIImage(named: "image")!
+    var nickName: String = "로딩"
+    var frontImage: UIImage = UIImage(named: "moonChang")!
     var circleName: String = "문예창작단"
     
     
@@ -61,6 +61,7 @@ class MainVC: UIViewController {
     // 대문 이미지 뷰
     lazy var frontImageView:UIImageView = UIImageView().then {
         $0.image = frontImage
+        $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
     }
     
@@ -350,6 +351,10 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         default:
             cell.fetchData(data: Dummy_circleCellDataList[indexPath.row])
         }
+        
+        cell.partButton1.setTitle(Dummy_circleCellDataList[indexPath.row].partList[0], for: .normal)
+        cell.partButton2.setTitle(Dummy_circleCellDataList[indexPath.row].partList[1], for: .normal)
+        cell.partButton3.setTitle(Dummy_circleCellDataList[indexPath.row].partList[2], for: .normal)
         
 //        cell.fetchData(data: Dummy_circleCellDataList[indexPath.row])
         // 셀 선택할 때의 색 없앱니다

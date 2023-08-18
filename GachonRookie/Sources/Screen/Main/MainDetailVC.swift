@@ -17,15 +17,15 @@ class MainDetailVC: UIViewController {
 
     // MARK: Variables
     
-    var clubName: String = "브로콜리협의회"
-    var isUnionClub: Bool = false
-    var snsURL: String = "https://github.com/youz2me"
-    var activeStartDate: String = "2023-06-18"
-    var activeEndDate: String = "2023-08-19"
+    var clubName: String = "가천대학교 UMC"
+    var isUnionClub: Bool = true
+    var snsURL: String = "https://litt.ly/gachon_makeus_challenge"
+    var activeStartDate: String = "2023-09-09"
+    var activeEndDate: String = "2023-12-31"
     var recruitStartDate: String = "2023-08-20"
     var recruitEndDate: String = "2023-08-26"
     var recruitTarget: String = "가천대학교 재학생 및 휴학생"
-    var parts: String = "Server, iOS, Design"
+    var parts: String = "Server, iOS, Design, PM"
     
     let dateFormat: DateFormatter = DateFormatter().then {
         $0.dateFormat = "yyyy-MM-dd"
@@ -44,7 +44,7 @@ class MainDetailVC: UIViewController {
     var contentView: UIView = UIView()
     
     var clubImageView: UIImageView = UIImageView().then {
-        $0.image = UIImage(named: "image")
+        $0.image = UIImage(named: "umcImage")
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
     }
@@ -171,6 +171,34 @@ class MainDetailVC: UIViewController {
         $0.font = Paragraph1
         $0.text = "\(parts)"
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        myInfo.getMyToken()
+//        myInfo.postLoginToGetToken(userID: "dfdfd", nickName: "유진")
+////
+////        let wrapper = MoyaWrapper<ClubAPI>()
+////        wrapper.requestSuccessRes(target: .getMainDetailPage(clubId: 1), instance: data_getMainDetailPage.self)
+////        { result in
+////            switch result {
+////            case .success(let result):
+////                print(result)
+////                self.clubName = result.clubName
+////                self.linkButton.setTitle("https://litt.ly/gachon_makeus_challenge", for: .normal)
+////                self.activeStartDate = result.activityStartDate
+////                self.activeEndDate = result.activityEndDate
+////                self.recruitStartDate = result.applyStartDate
+////                self.recruitEndDate = result.applyEndDate
+////                self.recruitTarget = result.target
+////                self.parts = result.parts.joined(separator: ", ")
+////
+////                result.activityEndDate
+////            case .failure(let error):
+////                print(error.localizedDescription)
+////            }
+//        }
+//
+//
+//    }
     
 
     override func viewDidLoad() {
