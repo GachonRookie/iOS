@@ -26,8 +26,13 @@ let Warning = UIColor(hexCode: "FFB525")
 let Complete = UIColor(hexCode: "00C950")
 let Active = UIColor(hexCode: "007DF0")
 
+/// 남색
 let Main01 = UIColor(hexCode: "0081C9")
+/// 하늘색
 let Main02 = UIColor(hexCode: "5BC0F8")
+/// 구름색
 let Main03 = UIColor(hexCode: "F4FAFD")
+/// 노랑색
 let Main04 = UIColor(hexCode: "FFC93C")
+/// 초록색
 let Main05 = UIColor(hexCode: "A2FF86")
