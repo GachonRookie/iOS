@@ -11,6 +11,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 
 class LoginVC: UIViewController {
@@ -45,8 +46,21 @@ class LoginVC: UIViewController {
         setUpLayout()
         setUpDelegate()
         setUpConstraint()
+        
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //토큰 있는지 확인
+        if myInfo.getMyToken() {
+            let mainVC = TabBarController()
+            mainVC.modalTransitionStyle = .coverVertical
+            mainVC.modalPresentationStyle = .fullScreen
+            
+            self.present(mainVC, animated: true)
+        }
+    }
 
     // MARK: View
     
@@ -85,11 +99,6 @@ class LoginVC: UIViewController {
         descriptionLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(20)
-        }
-        
-        mainButton.snp.makeConstraints {
-            $0.bottom.equalTo(appleLoginButton.snp.top).offset(-20)
-            $0.leading.trailing.equalTo(appleLoginButton)
         }
         
         appleLoginButton.snp.makeConstraints {
@@ -138,6 +147,11 @@ extension LoginVC: ASAuthorizationControllerDelegate, ASAuthorizationControllerP
         print("\(appleIDCredential.email)")
         print("\(appleIDCredential.fullName)")
         
+        myInfo.postLoginToGetToken(userID: appleIDCredential.user, nickName: appleIDCredential.fullName?.description ?? "로딩")
+        
+        myInfo.getMyPageWithToken()
+        
+        
         // 일단 화면 전환만 가능하게 설정
         let mainVC = TabBarController()
         mainVC.modalTransitionStyle = .coverVertical
@@ -149,6 +163,10 @@ extension LoginVC: ASAuthorizationControllerDelegate, ASAuthorizationControllerP
         // 회원이면 로그인 처리하고 메인으로 전환
         // 회원 아니면 온보딩 04로 연결해서 가입 진행
     }
+    
+    
+    
+    
     
     // 애플 인증 실패 시
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
