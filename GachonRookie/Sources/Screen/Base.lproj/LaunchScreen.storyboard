@@ -16,17 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vWX-eO-uh7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo" highlightedImage="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hNL-ye-byo">
                                 <rect key="frame" x="76" y="362" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8T6-Wp-P6N"/>
+                                    <constraint firstAttribute="height" constant="128" id="vNQ-Bg-RtF"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="vWX-eO-uh7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="1aJ-Zy-1hj"/>
-                            <constraint firstItem="vWX-eO-uh7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="4cc-40-uTv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vWX-eO-uh7" secondAttribute="trailing" constant="77" id="K8M-9I-dBb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vWX-eO-uh7" secondAttribute="bottom" constant="328" id="Q3i-7g-HQ1"/>
+                            <constraint firstItem="hNL-ye-byo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="8pd-Ra-ZaO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hNL-ye-byo" secondAttribute="bottom" constant="328" id="Lzo-YC-mMR"/>
+                            <constraint firstItem="hNL-ye-byo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="XGo-VF-Xjo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hNL-ye-byo" secondAttribute="trailing" constant="77" id="Ykl-iz-PrY"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="97.666664123535156" height="80"/>
+        <image name="MainLogo" width="628" height="465"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.50588235294117645" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

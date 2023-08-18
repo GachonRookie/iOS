@@ -18,15 +18,20 @@ class LoginVC: UIViewController {
     // MARK: Variables
     
     var logoImageView: UIImageView = UIImageView().then {
-        $0.image = UIImage(named: "Logo")
+        $0.image = UIImage(named: "MainLogo")
         $0.clipsToBounds = true
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
     }
     
     var descriptionLabel: UILabel = UILabel().then {
         $0.text = "동아리의 첫 시작, 동방"
         $0.font = Paragraph2
         $0.textColor = White
+    }
+    
+    var mainButton: UIButton = UIButton().then {
+        $0.setTitle("메인으로", for: .normal)
+        $0.addTarget(self, action: #selector(didMainButtonTapped), for: .touchUpInside)
     }
     
     var appleLoginButton: ASAuthorizationAppleIDButton = ASAuthorizationAppleIDButton().then {
@@ -56,6 +61,7 @@ class LoginVC: UIViewController {
         [
             logoImageView,
             descriptionLabel,
+            mainButton,
             appleLoginButton
         ].forEach { view.addSubview($0) }
     }
@@ -73,11 +79,17 @@ class LoginVC: UIViewController {
         logoImageView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-50)
+            $0.height.equalTo(80)
         }
         
         descriptionLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(20)
+        }
+        
+        mainButton.snp.makeConstraints {
+            $0.bottom.equalTo(appleLoginButton.snp.top).offset(-20)
+            $0.leading.trailing.equalTo(appleLoginButton)
         }
         
         appleLoginButton.snp.makeConstraints {
@@ -90,7 +102,14 @@ class LoginVC: UIViewController {
     
     
     // MARK: Function
-    
+    @objc func didMainButtonTapped() {
+        /// 일단 화면 전환만 가능하게 설정
+        let mainVC = TabBarController()
+        mainVC.modalTransitionStyle = .coverVertical
+        mainVC.modalPresentationStyle = .fullScreen
+        
+        self.present(mainVC, animated: true)
+    }
 }
 
 
@@ -120,6 +139,11 @@ extension LoginVC: ASAuthorizationControllerDelegate, ASAuthorizationControllerP
         print("\(appleIDCredential.fullName)")
         
         // 일단 화면 전환만 가능하게 설정
+        let mainVC = TabBarController()
+        mainVC.modalTransitionStyle = .coverVertical
+        mainVC.modalPresentationStyle = .fullScreen
+        
+        self.present(mainVC, animated: true)
         
         // TODO: 서버랑 연결해서 정보 넘기고 메인으로 전환까지 진행
         // 회원이면 로그인 처리하고 메인으로 전환
