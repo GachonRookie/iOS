@@ -11,6 +11,7 @@
 		88B7AB012A8F78FA00E94885 /* customSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB002A8F78FA00E94885 /* customSegmentView.swift */; };
 		88B7AB042A8F88F300E94885 /* cirtcleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */; };
 		88B7AB062A8F917600E94885 /* colorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB052A8F917600E94885 /* colorButton.swift */; };
+		88B7AB092A8FA2AC00E94885 /* circleCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7AB082A8FA2AC00E94885 /* circleCellData.swift */; };
 		DD1322FC2A86A30F009D519A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DD1322FB2A86A30F009D519A /* Alamofire */; };
 		DD1322FF2A86A323009D519A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD1322FE2A86A323009D519A /* SnapKit */; };
 		DD1323022A86A332009D519A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DD1323012A86A332009D519A /* Then */; };
@@ -81,6 +82,7 @@
 		88B7AB002A8F78FA00E94885 /* customSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmentView.swift; sourceTree = "<group>"; };
 		88B7AB032A8F88F300E94885 /* cirtcleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cirtcleTableViewCell.swift; sourceTree = "<group>"; };
 		88B7AB052A8F917600E94885 /* colorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorButton.swift; sourceTree = "<group>"; };
+		88B7AB082A8FA2AC00E94885 /* circleCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleCellData.swift; sourceTree = "<group>"; };
 		DD60D3742A88FE3F005D6F7F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DD60D3752A88FE3F005D6F7F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		DD60D3762A88FE3F005D6F7F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -169,9 +171,18 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		88B7AB072A8FA29100E94885 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88B7AB082A8FA2AC00E94885 /* circleCellData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DD60D3702A88FDAD005D6F7F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88B7AB072A8FA29100E94885 /* Model */,
 				DD8E58BF2A869E55007DACC7 /* Assets.xcassets */,
 				DD60D3842A88FEDC005D6F7F /* Data */,
 				DD60D3892A89016D005D6F7F /* Extension */,
@@ -496,6 +507,7 @@
 				DDAFE6DC2A8FB435005B2D55 /* ResultPopUpVC.swift in Sources */,
 				DD60D38B2A8901BB005D6F7F /* UIImage+.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
+				88B7AB092A8FA2AC00E94885 /* circleCellData.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,
 				DD99AD902A8F9667005BEA59 /* MyClubCollectionViewCell.swift in Sources */,
 				88B7AB062A8F917600E94885 /* colorButton.swift in Sources */,
