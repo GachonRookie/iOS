@@ -85,13 +85,19 @@ class ApplyVC: UIViewController, UIScrollViewDelegate {
     // 폐지 아래선
     lazy var secondLine = UIView().then { $0.backgroundColor = Gray04 }
     
-    // 활동중 라벨
+    // 신규 라벨
     lazy var newLabel: UILabel = UILabel().then {
         $0.text = "신규"
         $0.font = Title3
     }
     
-    // 활동중 컬렉션 뷰
+    lazy var makeNewBtn: UIButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "plus.circle")!, for: .normal)
+        $0.tintColor = Main01
+        $0.addTarget(self, action: #selector(presentView), for: .touchUpInside)
+    }
+    
+    // 신규 컬렉션 뷰
     lazy var newCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
         $0.scrollDirection = .horizontal
         $0.minimumLineSpacing = 0
@@ -141,6 +147,7 @@ class ApplyVC: UIViewController, UIScrollViewDelegate {
             closedCollectionView,
             secondLine,
             newLabel,
+            makeNewBtn,
             newCollectionView,
             thirdLine
         ].forEach { contentView.addSubview($0)}
@@ -243,6 +250,12 @@ class ApplyVC: UIViewController, UIScrollViewDelegate {
             $0.leading.equalTo(onActiveLabel)
         }
         
+        makeNewBtn.snp.makeConstraints {
+            $0.leading.equalTo(newLabel.snp.trailing).offset(10)
+            $0.centerY.equalTo(newLabel)
+            $0.size.equalTo(20)
+        }
+        
         newCollectionView.snp.makeConstraints {
             $0.top.equalTo(newLabel.snp.bottom).offset(10)
             $0.horizontalEdges.equalToSuperview()
@@ -250,6 +263,11 @@ class ApplyVC: UIViewController, UIScrollViewDelegate {
         }
         
         
+    }
+    
+    @objc func presentView() {
+//        let nextVC = 당신의 VC
+//        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     /// TableView 내용 변경
