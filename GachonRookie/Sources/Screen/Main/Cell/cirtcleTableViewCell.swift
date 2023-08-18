@@ -16,16 +16,20 @@ class CircleTableViewCell: UITableViewCell {
     lazy var clubImageView:UIImageView = UIImageView().then {
         $0.image = UIImage(named: "image")
         $0.contentMode = .scaleAspectFit
-        $0.layer.cornerRadius = 10
+        $0.layer.cornerRadius = 20
         $0.clipsToBounds = true
         $0.backgroundColor = .gray
     }
     
     lazy var titleLabel:UILabel = UILabel().then {
         $0.text = "가천대학교 브로콜리 협의회"
-        $0.font = .systemFont(ofSize: 18, weight: .bold)
+        $0.font = .systemFont(ofSize: 16, weight: .bold)
         $0.textColor = .black
     }
+    
+//    lazy var statusButton:UIButton = UIButton().then {
+//        
+//    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -78,12 +82,12 @@ class CircleTableViewCell: UITableViewCell {
         clubImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(20)
             $0.centerY.equalToSuperview()
-//            $0.center.equalToSuperview()
-//            $0.size.equalTo(self.)
+            $0.size.equalTo(90)
         }
         
         titleLabel.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.leading.equalTo(clubImageView.snp.trailing).offset(20)
+            $0.top.equalTo(clubImageView)
         }
     }
 }
@@ -98,7 +102,7 @@ struct CircleTableViewCell_Preview: PreviewProvider {
             let cell = CircleTableViewCell(style: .default, reuseIdentifier: CircleTableViewCell.cellID)
             return cell
         }
-        .previewLayout(.sizeThatFits)
+        .previewLayout(.fixed(width: 393, height: 120))
         //.padding(10)
     }
 }

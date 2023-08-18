@@ -45,6 +45,8 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(self.view.frame.width)
+        
         setUpView()
         setUpLayout()
         setUpDelegate()
