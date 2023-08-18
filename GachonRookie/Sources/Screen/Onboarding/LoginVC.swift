@@ -29,6 +29,11 @@ class LoginVC: UIViewController {
         $0.textColor = White
     }
     
+    var mainButton: UIButton = UIButton().then {
+        $0.setTitle("메인으로", for: .normal)
+        $0.addTarget(self, action: #selector(didMainButtonTapped), for: .touchUpInside)
+    }
+    
     var appleLoginButton: ASAuthorizationAppleIDButton = ASAuthorizationAppleIDButton().then {
         $0.addTarget(self, action: #selector(didAppleButtonTapped), for: .touchUpInside)
     }
@@ -56,6 +61,7 @@ class LoginVC: UIViewController {
         [
             logoImageView,
             descriptionLabel,
+            mainButton,
             appleLoginButton
         ].forEach { view.addSubview($0) }
     }
@@ -81,6 +87,11 @@ class LoginVC: UIViewController {
             $0.centerY.equalToSuperview().offset(20)
         }
         
+        mainButton.snp.makeConstraints {
+            $0.bottom.equalTo(appleLoginButton.snp.top).offset(-20)
+            $0.leading.trailing.equalTo(appleLoginButton)
+        }
+        
         appleLoginButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-90)
             $0.leading.equalToSuperview().offset(20)
@@ -91,7 +102,14 @@ class LoginVC: UIViewController {
     
     
     // MARK: Function
-    
+    @objc func didMainButtonTapped() {
+        /// 일단 화면 전환만 가능하게 설정
+        let mainVC = TabBarController()
+        mainVC.modalTransitionStyle = .coverVertical
+        mainVC.modalPresentationStyle = .fullScreen
+        
+        self.present(mainVC, animated: true)
+    }
 }
 
 
