@@ -57,6 +57,9 @@ class MainVC: UIViewController {
     // MARK: View
     func setUpView() {
         view.backgroundColor = .white
+        
+        //MARK: - tableViewCell 파일 register
+        self.clubTableView.register(CircleTableViewCell.self, forCellReuseIdentifier: CircleTableViewCell.cellID)
     }
     
     
@@ -72,6 +75,8 @@ class MainVC: UIViewController {
     
     // MARK: Delegate
     func setUpDelegate() {
+        self.clubTableView.delegate = self
+        self.clubTableView.dataSource = self
     }
     
     
@@ -155,6 +160,24 @@ class MainVC: UIViewController {
             
         }
     }
+    
+}
+
+extension MainVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CircleTableViewCell.cellID, for: indexPath) as! CircleTableViewCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     
 }
 

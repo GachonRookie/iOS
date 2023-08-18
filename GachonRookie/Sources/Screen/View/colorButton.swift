@@ -14,7 +14,7 @@ class colorButton: UIButton {
     // MARK: Variables
     
     // 내용, 글자색, 버튼 배경색, 테두리색 설정
-    func setColorAndTitle(title:String, titleColor:UIColor = .black, backgroundColor:UIColor, borderColor:CGColor) {
+    func setColorAndTitle(title:String, titleColor:UIColor = .black, backgroundColor:UIColor, borderColor:CGColor = UIColor.white.cgColor) {
         self.setTitleColor(titleColor, for: .normal)
         self.layer.borderColor = borderColor
         self.backgroundColor = backgroundColor
@@ -26,11 +26,12 @@ class colorButton: UIButton {
     
     func setUpView() {
         self.layer.masksToBounds = true
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = 12
         self.layer.borderWidth = 1.5
         self.setTitleColor(.white, for: .normal)
         self.backgroundColor = Main01
-        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
+        self.contentEdgeInsets = UIEdgeInsets(top: 4, left: 13, bottom: 4, right: 13)
+        self.titleLabel?.font = .systemFont(ofSize: 11)
     }
     
     
