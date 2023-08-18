@@ -44,6 +44,8 @@
 		DD8E58CE2A869E55007DACC7 /* GachonRookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E58CD2A869E55007DACC7 /* GachonRookieTests.swift */; };
 		DD8E58D82A869E55007DACC7 /* GachonRookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E58D72A869E55007DACC7 /* GachonRookieUITests.swift */; };
 		DD8E58DA2A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E58D92A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift */; };
+		DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73ADB2A8F2B9000C9D65A /* UIViewController+.swift */; };
+		DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		DD8E58D32A869E55007DACC7 /* GachonRookieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GachonRookieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8E58D72A869E55007DACC7 /* GachonRookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachonRookieUITests.swift; sourceTree = "<group>"; };
 		DD8E58D92A869E55007DACC7 /* GachonRookieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachonRookieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDA73ADB2A8F2B9000C9D65A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 			children = (
 				DD8E58C12A869E55007DACC7 /* LaunchScreen.storyboard */,
 				DD8E58BA2A869E53007DACC7 /* ViewController.swift */,
+				DDA73ADD2A8F2C2000C9D65A /* TableViewCell.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			children = (
 				DD60D38A2A8901BB005D6F7F /* UIImage+.swift */,
 				DD60D38E2A8901CF005D6F7F /* UIColor+.swift */,
+				DDA73ADB2A8F2B9000C9D65A /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -380,6 +386,8 @@
 			files = (
 				DD8E58BB2A869E53007DACC7 /* ViewController.swift in Sources */,
 				DD8E58B72A869E53007DACC7 /* AppDelegate.swift in Sources */,
+				DDA73ADC2A8F2B9000C9D65A /* UIViewController+.swift in Sources */,
+				DDA73ADE2A8F2C2000C9D65A /* TableViewCell.swift in Sources */,
 				DD60D38B2A8901BB005D6F7F /* UIImage+.swift in Sources */,
 				DD60D3932A8901ED005D6F7F /* ColorData.swift in Sources */,
 				DD60D3862A88FEE8005D6F7F /* FontData.swift in Sources */,
