@@ -17,6 +17,28 @@ class MainDetailVC: UIViewController {
 
     // MARK: Variables
     
+    var clubName: String = "브로콜리협의회"
+    var isUnionClub: Bool = false
+    var snsURL: String = "https://github.com/youz2me"
+    var activeStartDate: String = "2023-06-18"
+    var activeEndDate: String = "2023-08-19"
+    var recruitStartDate: String = "2023-08-20"
+    var recruitEndDate: String = "2023-08-26"
+    var recruitTarget: String = "가천대학교 재학생 및 휴학생"
+    var parts: String = "Server, iOS, Design"
+    
+    let dateFormat: DateFormatter = DateFormatter().then {
+        $0.dateFormat = "yyyy-MM-dd"
+    }
+    
+    lazy var convertActiveStartDate = Calendar.current.dateComponents([.year, .month, .day], from: dateFormat.date(from: activeStartDate)!)
+    
+    lazy var convertActiveEndDate = Calendar.current.dateComponents([.year, .month, .day], from: dateFormat.date(from: activeEndDate)!)
+    
+    lazy var convertRecruitStartDate = Calendar.current.dateComponents([.year, .month, .day], from: dateFormat.date(from: recruitStartDate)!)
+    
+    lazy var convertRecruitEndDate = Calendar.current.dateComponents([.year, .month, .day], from: dateFormat.date(from: recruitEndDate)!)
+    
     var scrollView: UIScrollView = UIScrollView()
     
     var contentView: UIView = UIView()
@@ -31,8 +53,11 @@ class MainDetailVC: UIViewController {
         $0.backgroundColor = White
     }
     
-    var clubTypeLabel: UILabel = UILabel().then {
-        $0.text = "교내 동아리"
+    lazy var clubTypeLabel: UILabel = UILabel().then {
+        if isUnionClub == true {
+            $0.text = "연합 동아리"
+        }
+        else { $0.text = "교내 동아리" }
         $0.font = Paragraph4
     }
     
@@ -43,8 +68,8 @@ class MainDetailVC: UIViewController {
         $0.addTarget(self, action: #selector(didReportButtonTapped), for: .touchUpInside)
     }
     
-    var clubNameLabel: UILabel = UILabel().then {
-        $0.text = "동아리 이름"
+    lazy var clubNameLabel: UILabel = UILabel().then {
+        $0.text = "\(clubName)"
         $0.font = Title2
     }
     
@@ -58,8 +83,8 @@ class MainDetailVC: UIViewController {
         $0.layer.borderWidth = 0.7
     }
     
-    var linkButton: UIButton = UIButton().then {
-        $0.setTitle("https://www.welcomtobrocolibors.com", for: .normal)
+    lazy var linkButton: UIButton = UIButton().then {
+        $0.setTitle("\(snsURL)", for: .normal)
         $0.setTitleColor(Main01, for: .normal)
         $0.titleLabel?.font = CaptionText1
         $0.contentHorizontalAlignment = .leading
@@ -81,9 +106,9 @@ class MainDetailVC: UIViewController {
         $0.textColor = Gray07
     }
     
-    var timeContentLabel: UILabel = UILabel().then {
+    lazy var timeContentLabel: UILabel = UILabel().then {
         $0.font = Paragraph1
-        $0.text = "8월 26일 부터 12월 31일 까지"
+        $0.text = "\(convertActiveStartDate.month!)월 \(convertActiveStartDate.day!)일 부터 \(convertActiveEndDate.month!)월 \(convertActiveEndDate.day!)일 까지"
     }
     
     var firstBottomView: UIView = UIView().then {
@@ -101,9 +126,9 @@ class MainDetailVC: UIViewController {
         $0.textColor = Gray07
     }
     
-    var peopleContentLabel: UILabel = UILabel().then {
+    lazy var peopleContentLabel: UILabel = UILabel().then {
         $0.font = Paragraph1
-        $0.text = "가천대학교 재학생 및 휴학생"
+        $0.text = "\(recruitTarget)"
     }
     
     var secondBottomView: UIView = UIView().then {
@@ -121,9 +146,9 @@ class MainDetailVC: UIViewController {
         $0.textColor = Gray07
     }
     
-    var recruitingTermContentLabel: UILabel = UILabel().then {
+    lazy var recruitingTermContentLabel: UILabel = UILabel().then {
         $0.font = Paragraph1
-        $0.text = "가천대학교 재학생 및 휴학생"
+        $0.text = "\(convertRecruitStartDate.month!)월 \(convertRecruitStartDate.day!)일부터 \(convertRecruitEndDate.month!)월 \(convertRecruitEndDate.day!)일까지"
     }
     
     var thirdBottomView: UIView = UIView().then {
@@ -142,9 +167,9 @@ class MainDetailVC: UIViewController {
         $0.textColor = Gray07
     }
     
-    var recruitingPartContentLabel: UILabel = UILabel().then {
+    lazy var recruitingPartContentLabel: UILabel = UILabel().then {
         $0.font = Paragraph1
-        $0.text = "가천대학교 재학생 및 휴학생"
+        $0.text = "\(parts)"
     }
     
 
