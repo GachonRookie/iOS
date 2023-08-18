@@ -325,13 +325,13 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             return Dummy_circleCellDataList.count
             //교내
         case 1:
-            return getCountFromCircleData(tag: 1)
+            return getCountFromCircleData(list: Dummy_circleCellDataList,tag: "교내")
             //연합
         case 2:
-            return getCountFromCircleData(tag: 2)
+            return getCountFromCircleData(list: Dummy_circleCellDataList,tag: "연합")
             
         default:
-            return getCountFromCircleData(tag: self.tableViewIndex)
+            return 0
         }
     }
     
@@ -343,9 +343,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             cell.fetchData(data: Dummy_circleCellDataList[indexPath.row])
         case 1:
-            cell.fetchData(data:getListFromCircleData(tag: 1)[indexPath.row])
+            cell.fetchData(data:getListFromCircleData(list: Dummy_circleCellDataList,tag: "교내")[indexPath.row])
         case 2:
-            cell.fetchData(data:getListFromCircleData(tag: 2)[indexPath.row])
+            cell.fetchData(data:getListFromCircleData(list: Dummy_circleCellDataList,tag: "연합")[indexPath.row])
             
         default:
             cell.fetchData(data: Dummy_circleCellDataList[indexPath.row])
