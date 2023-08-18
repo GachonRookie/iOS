@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "동방.svg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "동방 1.svg",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
       "filename" : "동방 2.svg",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {
