@@ -131,7 +131,25 @@ extension UserVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyClubCollectionViewCell().cellID, for: indexPath) as? MyClubCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.clubNameLabel.text = clubName
+        cell.clubNameLabel.text = Dummy_circleCellDataList[indexPath.row].title
+        cell.clubImageView.image = Dummy_circleCellDataList[indexPath.row].image
+        
+        if indexPath.row == 0 {
+            cell.recrutingTypeButton.setTitle("iOS", for: .normal)
+            cell.clubRecruitngDateLabel.text = "8월 20일부터 8월 26일까지"
+            cell.currentApplyNumberLabel.text = "지금 33명이 가천대학교 UMC에 지원했어요!"
+            cell.previousApplyPercentLabel.text = "직전 기수에서는 39명 중 32명이 합격했어요!"
+        }
+        else {
+            cell.recrutingTypeButton.setTitle("베이스", for: .normal)
+            cell.clubRecruitngDateLabel.text = "8월 28일부터 9월 7일까지"
+            cell.currentApplyNumberLabel.text = "지금 19명이 문예창작단에 지원했어요!"
+            cell.previousApplyPercentLabel.text = "직전 기수에서는 45명 중 23명이 합격했어요!"
+        }
+        
+        
+        
+
         
         return cell
     }
