@@ -8,6 +8,8 @@
 </div>
 <div align=center>
 
+<img width="1920" alt="01표지" src="https://github.com/GachonRookie/iOS/assets/80394340/37854364-2068-41d8-b5c8-5703416158fa">
+
 # 🍎 Team iOS Members 🍎
   
 <img width="200px" src="https://avatars.githubusercontent.com/u/80394340?v=4"/> | <img width="200px" src="https://avatars.githubusercontent.com/u/125115284?v=4"/> | 
